@@ -6,7 +6,9 @@
     {
       "type": "minecraft:text",
       "key": "url",
-      "label": "URLを入力して、「実行」をクリック"
+      "label": "URLを入力して、「実行」をクリック",
+      "width": 320,
+      "max_length": 512
     }
   ],
   "columns": 2,
