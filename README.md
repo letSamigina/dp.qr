@@ -2,7 +2,7 @@
 QRコードを生成し、地図に表示するデータパックです。
 
 ## 【データパック名】
-.smgn.qr
+.drc.qr
 
 ### 《対応バージョン》
  - Minecraft Java Edition Ver.1.21.11
@@ -18,3 +18,28 @@ QRコードを生成し、地図に表示するデータパックです。
 
 ## 参考動画
 https://youtu.be/jvI9QKxougU
+
+---
+
+## English
+
+A Minecraft datapack that generates a QR code from a URL and displays it on a map.
+
+### Datapack name
+`.drc.qr`
+
+### Supported version
+- Minecraft Java Edition 1.21.11
+
+### Features
+- Parses the URL you enter and builds a Version 3, error-correction level **M** QR code
+- The QR code is drawn with blocks in the air, aligned to the smallest map size (128×128 blocks) that contains your execution position
+
+### How to use
+- Press **`G`** to open the dialog menu
+- Choose **Enter URL**, type a URL, and run
+  - Minecraft may show a warning before running the command; it is safe to proceed
+
+### Reference video
+https://youtu.be/jvI9QKxougU
+

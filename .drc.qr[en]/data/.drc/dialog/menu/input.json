@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "[.drc.qr] Enter URL",
+  "external_title": "Enter URL",
+  "inputs": [
+    {
+      "type": "minecraft:text",
+      "key": "url",
+      "label": "Enter a URL, then click Run",
+      "width": 320,
+      "max_length": 512
+    },
+    {
+      "type": "boolean",
+      "key": "skin_head_display",
+      "label": {
+        "text": "Reserve space for player head icons",
+        "hover_event": {
+          "action": "show_text",
+          "value": {
+            "text": "Recommended when generating per-player links (e.g. social profiles).\nPlayer heads must be placed manually."
+          }
+        }
+      },
+      "on_true": "1",
+      "on_false": "0"
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": "Back",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": ".drc:"
+      }
+    },
+    {
+      "label": "Run",
+      "action": {
+        "type": "minecraft:dynamic/run_command",
+        "template": "/function .drc:qr/exe {url:\"$(url)\",player_head_space:\"$(skin_head_display)\"}"
+      }
+    }
+  ]
+}

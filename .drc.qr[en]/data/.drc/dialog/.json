@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:dialog_list",
+    "title": "Menu",
+    "exit_action": {
+      "label": "Close",
+      "action": {
+        "type": "minecraft:copy_to_clipboard",
+        "value": ""
+      }
+    },
+    "columns": 1,
+    "dialogs": [
+      ".drc:menu/input"
+    ]
+  }

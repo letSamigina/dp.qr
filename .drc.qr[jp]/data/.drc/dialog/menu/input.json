@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "[.drc.qr]URL入力",
+  "external_title": "URL入力",
+  "inputs": [
+    {
+      "type": "minecraft:text",
+      "key": "url",
+      "label": "URLを入力して、「実行」をクリック",
+      "width": 320,
+      "max_length": 512
+    },
+    {
+      "type": "boolean",
+      "key": "skin_head_display",
+      "label": {
+        "text": "プレイヤーアイコン用のスペースを確保する",
+        "hover_event": {
+          "action": "show_text",
+          "value": {
+            "text": "各プレイヤーのSNSリンクなどを生成する際にチェックをおすすめします\nプレイヤーアイコンは手動での設置になります"
+          }
+        }
+      },
+      "on_true": "1",
+      "on_false": "0"
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": "戻る",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": ".drc:"
+      }
+    },
+    {
+      "label": "実行",
+      "action": {
+        "type": "minecraft:dynamic/run_command",
+        "template": "/function .drc:qr/exe {url:\"$(url)\",player_head_space:\"$(skin_head_display)\"}"
+      }
+    }
+  ]
+}
