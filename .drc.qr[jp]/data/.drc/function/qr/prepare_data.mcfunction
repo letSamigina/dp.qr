@@ -14,9 +14,9 @@ function .drc:qr/url_brand/detect
 function .drc:url/analysis/mode_indicator/
 function .drc:url/analysis/characters/
 function .drc:url/analysis/main/
-execute if data storage .drc:.qr {config:{debug:1b}} run tellraw @s {"text":"[.drc] URL解析が完了しました","color":"gold"}
+execute if data storage .drc:.qr {config:{debug:1b}} run tellraw @s {"text":"[.drc.qr] URL解析が完了しました","color":"gold"}
 function .drc:encode/8bit
-execute if data storage .drc:.qr {config:{debug:1b}} run tellraw @s {"text":"[.drc] 8bit変換が完了しました","color":"gold"}
+execute if data storage .drc:.qr {config:{debug:1b}} run tellraw @s {"text":"[.drc.qr] 8bit変換が完了しました","color":"gold"}
 
 # Snapshot data codewords before ECC (version3/M: 44 data codewords)
 data modify storage .drc:.qr payload.data_codewords set from storage .drc:.binary code.8bit
@@ -24,12 +24,12 @@ execute store result storage .drc:.qr payload.data_count int 1 run data get stor
 
 # Phase 2: ECC generation (non-recursive fixed 44 steps)
 function .drc:qr/ecc/compute_from_data
-execute if data storage .drc:.qr {config:{debug:1b}} run tellraw @s {"text":"[.drc] ECC計算（新実装）が完了しました","color":"gold"}
+execute if data storage .drc:.qr {config:{debug:1b}} run tellraw @s {"text":"[.drc.qr] ECC計算（新実装）が完了しました","color":"gold"}
 data modify storage .drc:.qr payload.ecc_ok set value 1b
 execute store result storage .drc:.qr payload.ecc_count int 1 run data get storage .drc:.qr payload.ecc
-execute if data storage .drc:.qr {config:{debug:1b}} if data storage .drc:.qr {payload:{ecc_count:26}} run tellraw @s {"text":"[.drc] ECC語数=26 を確認しました","color":"gold"}
+execute if data storage .drc:.qr {config:{debug:1b}} if data storage .drc:.qr {payload:{ecc_count:26}} run tellraw @s {"text":"[.drc.qr] ECC語数=26 を確認しました","color":"gold"}
 execute unless data storage .drc:.qr {payload:{ecc_count:26}} run data modify storage .drc:.qr payload.ecc_ok set value 0b
-execute if data storage .drc:.qr {payload:{ecc_ok:0b}} run tellraw @s {"text":"[.drc] ECC語数が26にならないため処理を停止します","color":"red"}
+execute if data storage .drc:.qr {payload:{ecc_ok:0b}} run tellraw @s {"text":"[.drc.qr] ECC語数が26にならないため処理を停止します","color":"red"}
 execute if data storage .drc:.qr {payload:{ecc_ok:0b}} run return 0
 
 # Save ECC workflow outputs for next phase (module placement + mask0)
@@ -39,4 +39,4 @@ data modify storage .drc:.qr payload.rs_work set value []
 data modify storage .drc:.qr payload.rs_work append from storage .drc:.qr payload.data_codewords[]
 data modify storage .drc:.qr payload.rs_work append from storage .drc:.qr payload.ecc[]
 execute store result storage .drc:.qr payload.rs_count int 1 run data get storage .drc:.qr payload.rs_work
-execute if data storage .drc:.qr {config:{debug:1b}} run tellraw @s {"text":"[.drc] prepare_data 完了: payloadを保存しました","color":"aqua"}
+execute if data storage .drc:.qr {config:{debug:1b}} run tellraw @s {"text":"[.drc.qr] prepare_data 完了: payloadを保存しました","color":"aqua"}

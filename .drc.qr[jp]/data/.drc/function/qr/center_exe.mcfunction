@@ -16,5 +16,5 @@ execute store result storage .drc:.map xyz.x int 1 run scoreboard players get @s
 execute store result storage .drc:.map xyz.z int 1 run scoreboard players get @s .smgn.Pos.z.calc
 
 function .drc:qr/summon_anchor with storage .drc:.map xyz
-execute if data storage .drc:.qr {config:{debug:1b}} run tellraw @s {"text":"[.drc] 地図中心を算出しアンカーを配置しました","color":"aqua"}
+execute if data storage .drc:.qr {config:{debug:1b}} run tellraw @s {"text":"[.drc.qr] 地図中心を算出しアンカーを配置しました","color":"aqua"}
 function .drc:qr/render_from_anchor

@@ -1,2 +1,2 @@
 data modify storage .drc:.qr config.debug set value 0b
-tellraw @s {"text":"[.drc] デバッグ表示: OFF","color":"green"}
+tellraw @s {"text":"[.drc.qr] デバッグ表示: OFF","color":"green"}

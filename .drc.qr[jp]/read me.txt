@@ -3,7 +3,7 @@
 ================================================================================
 
 概要
-  - Minecraft: Java Edition 向けデータパック（pack_format 94.1）
+  - Minecraft: Java Edition 向けデータパック（pack_format 101.1）
   - バージョン3・誤り訂正レベルMのQRコードを生成
   - 実行位置に合わせて、最小サイズの地図が描写可能な128×128にブロックを配置する形で描画。
 
@@ -30,6 +30,7 @@ MODパック・同梱
   - リポジトリ: https://github.com/DerecST/dp.qr
 
 バグ報告
+  - Discord: https://discord.gg/2XjjTM939j
   - GitHub: https://github.com/DerecST/dp.qr/issues
   - X（DM）: https://x.com/Derec_ST
   - 記載があると助かるもの: ゲームのバージョン、再現手順、URLの長さ（URL本文は伏せてよい）など

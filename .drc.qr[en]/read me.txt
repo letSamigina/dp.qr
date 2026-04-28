@@ -3,7 +3,7 @@
 ================================================================================
 
 Overview
-  - Minecraft: Java Edition datapack, pack_format 94.1
+  - Minecraft: Java Edition datapack, pack_format 101.1
   - Version 3 QR code, error-correction level M
   - Draws by placing blocks on a 128×128 grid at your run position—the area the smallest map can depict
 
@@ -30,6 +30,7 @@ Video / streaming (optional credit)
   - Repo: https://github.com/DerecST/dp.qr
 
 Bug reports
+  - Discord: https://discord.gg/2XjjTM939j
   - GitHub: https://github.com/DerecST/dp.qr/issues
   - X (DM): https://x.com/Derec_ST
   - Please include: game version, steps to reproduce, URL length (you may redact the URL itself).

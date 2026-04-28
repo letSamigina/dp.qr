@@ -42,4 +42,4 @@ execute unless data storage .drc:.binary code.all[0] run data modify storage .dr
 
 execute unless data storage .drc:.binary code.all[0] store result score @s .smgn.xor.data.count run data get storage .drc:.binary code.8bit
 
-execute unless data storage .drc:.binary code.all[0] if score @s .smgn.xor.data.count matches 71.. run return run tellraw @s {"text":"[.drc] Too much data; failed.","color":"red"}
+execute unless data storage .drc:.binary code.all[0] if score @s .smgn.xor.data.count matches 71.. run return run tellraw @s {"text":"[.drc.qr] Too much data; failed.","color":"red"}
