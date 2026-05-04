@@ -7,6 +7,8 @@ Overview
   - Version 3 QR code, error-correction level M
   - Draws by placing blocks on a 128×128 grid at your run position—the area the smallest map can depict
 
+QR Code is a registered trademark of DENSO WAVE INCORPORATED in Japan and in other countries.
+
 How to use
   1. Add this pack to the world.
   2. Open Quick Actions (default: G). Open the [.drc.qr] menu.
